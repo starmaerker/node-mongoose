@@ -1,9 +1,7 @@
 const mongoose = require("mongoose");
-
+const dbUrl = require("./secrets");
 const Blogposts = require("./models/blogposts");
 
-const dbUrl =
-  "mongodb://oceanmaster:lernwerkstatt.123@ds040637.mlab.com:40637/lernwerkstatt";
 const connect = mongoose.connect(dbUrl);
 
 connect.then(db => {
