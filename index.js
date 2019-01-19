@@ -7,17 +7,14 @@ const connect = mongoose.connect(dbUrl);
 connect.then(db => {
   console.log("Connected!");
 
-  var newBlogpost = Blogposts({
-    id: null,
-    title: "",
-    date: "",
-    author: "",
-    content: "",
-    imagelink: ""
-  });
-
-  newBlogpost
-    .save()
+  Blogposts.create({
+    id: 999,
+    title: "test",
+    date: "01.01.01",
+    author: "unknown",
+    content: "unimportant",
+    imagelink: "no"
+  })  
     .then(blogpost => {
       console.log(blogpost);
 
